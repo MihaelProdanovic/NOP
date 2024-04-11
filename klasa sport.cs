@@ -38,15 +38,10 @@ namespace klasaSport
     {
         static void Main(string[] args)
         {
-            sport Nogomet = new sport("Nogomet");
-            sport Vaterpolo = new sport("Vaterpolo", true);
+            sport Nogomet = new sport("Nogomet",true,11);
+            sport Vaterpolo = new sport("Vaterpolo", true,6);
             sport Curling = new sport("Curling", false, 4);
 
-            Console.WriteLine("Nogomet: " + Nogomet.Naziv + ", Igra li se loptom? " + Nogomet.IgraLiSeLoptom + ", Broj igrača: " + Nogomet.BrojIgraca);
-            Console.WriteLine("Vaterpolo: " + Vaterpolo.Naziv + ", Igra li se loptom? " + Vaterpolo.IgraLiSeLoptom + ", Broj igrača: " + Vaterpolo.BrojIgraca);
-            Console.WriteLine("Curling: " + Curling.Naziv + ", Igra li se loptom? " + Curling.IgraLiSeLoptom + ", Broj igrača: " + Curling.BrojIgraca);
-
-            Console.ReadKey();
         
         }
     }
