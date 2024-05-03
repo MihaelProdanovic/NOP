@@ -6,41 +6,43 @@ using System.Threading.Tasks;
 
 namespace klasa_vozilo
 {
-    class Vozilo
-    {
-        private bool leti;
-        private bool plovi;
-
-        public bool JeLiLeti { get => leti; set => leti = value; }
-        public bool JeLiPlovi { get => plovi; set => plovi = value; }
-
-        public void KudaVozi()
-        {
-            Console.WriteLine(String.Format("Leti: {0} | Plovi: {1}", JeLiLeti, JeLiPlovi));
-        }
-    }
-
-    class Brod : Vozilo
-    {
-        public Brod()
-        {
-            JeLiPlovi = true;
-            JeLiLeti = false;
-        }
-    }
-
-    class Zrakoplov : Vozilo
-    {
-        public Zrakoplov()
-        {
-            JeLiPlovi = false;
-            JeLiLeti = true;
-        }
-    }
     internal class Program
     {
+
+        class Vozilo
+        {
+            private bool leti;
+            private bool plovi;
+
+            public bool JeLiLeti { get => leti; set => leti = value; }
+            public bool JeLiPlovi { get => plovi; set => plovi = value; }
+
+            public void KudaVozi()
+            {
+                Console.WriteLine(String.Format("Leti: {0} | Plovi: {1}", JeLiLeti, JeLiPlovi));
+            }
+        }
+
+        class Brod : Vozilo
+        {
+            public Brod()
+            {
+                JeLiPlovi = true;
+                JeLiLeti = false;
+            }
+        }
+
+        class Zrakoplov : Vozilo
+        {
+            public Zrakoplov()
+            {
+                JeLiPlovi = false;
+                JeLiLeti = true;
+            }
+        }
         static void Main(string[] args)
         {
+
             Brod b = new Brod();
             Console.Write("Brod >>> ");
             b.KudaVozi();
